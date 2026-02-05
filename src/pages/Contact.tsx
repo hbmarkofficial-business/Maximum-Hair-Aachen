@@ -10,57 +10,57 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Kontakt & Termin | The Gentleman's Cut Berlin</title>
+        <title>Kontakt & Termin | Herren Frisör Aachen</title>
         <meta 
           name="description" 
-          content="Kontaktieren Sie The Gentleman's Cut in Berlin. Vereinbaren Sie Ihren Termin über unseren Chatbot oder rufen Sie uns an. Mo-Fr 09-20 Uhr, Sa 10-18 Uhr." 
+          content="Kontaktieren Sie den Herren Frisör in Aachen. Vereinbaren Sie Ihren Termin über unseren Chatbot oder rufen Sie uns an. Di-Sa ab 10:00 Uhr geöffnet." 
         />
         <link rel="canonical" href="https://gentlemanscut.de/kontakt" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Barbershop",
-            "@id": "https://example-barbershop.at/#barbershop",
-            "name": "Beispiel Barbershop Wien",
-            "url": "https://example-barbershop.at",
-            "logo": "https://example-barbershop.at/images/logo.png",
-            "image": "https://example-barbershop.at/images/shop.jpg",
-            "telephone": "+43 1 2345678",
+            "@id": "https://gentlemanscut.de/#barbershop",
+            "name": "Herren Frisör Aachen",
+            "url": "https://gentlemanscut.de",
+            "logo": "https://gentlemanscut.de/images/logo.png",
+            "image": "https://gentlemanscut.de/images/shop.jpg",
+            "telephone": "+49 176 62859345",
             "priceRange": "€€",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Musterstraße 12",
-              "addressLocality": "Wien",
-              "postalCode": "1020",
-              "addressCountry": "AT"
+              "streetAddress": "Adalbertsteinweg 29",
+              "addressLocality": "Aachen",
+              "postalCode": "52070",
+              "addressCountry": "DE"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "48.2167",
-              "longitude": "16.3958"
+              "latitude": "50.7753",
+              "longitude": "6.0839"
             },
             "areaServed": {
               "@type": "AdministrativeArea",
-              "name": "Wien"
+              "name": "Aachen"
             },
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Friday", "Saturday"],
+                "opens": "10:00",
                 "closes": "19:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "17:00"
+                "dayOfWeek": "Thursday",
+                "opens": "14:00",
+                "closes": "19:00"
               }
             ],
             "sameAs": [
-              "https://www.google.com/maps?cid=1234567890",
-              "https://www.instagram.com/beispielbarbershop",
-              "https://www.facebook.com/beispielbarbershop"
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40325.64356858961!2d6.052527748632826!3d50.82463020000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995e09610cb1%3A0x49e9708ed901fa69!2sMaximum%20Hair%20Aachen!5e0!3m2!1sde!2sde!4v1770299672152!5m2!1sde!2sde",
+              "https://www.instagram.com/herrenfrisoer",
+              "https://www.facebook.com/herrenfrisoer"
             ]
           })}
         </script>
@@ -96,8 +96,7 @@ const Contact = () => {
         <section className="py-24 bg-charcoal">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Reihenfolge für Desktop: Chatbot links, Kontakt rechts
-                  Reihenfolge für Mobile: Chatbot oben, Kontakt unten */}
+              
               <AnimateOnScroll animation="slide-left" className="order-1 lg:order-1">
                 <div className="bg-card border border-border rounded-sm p-8 md:p-10 h-fit">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
@@ -138,36 +137,25 @@ const Contact = () => {
                       Oder rufen Sie uns direkt an:
                     </p>
                     <a 
-                      href="tel:015118311067" 
+                      href="tel:017662859345" 
                       className="block text-center text-primary font-semibold mt-2 hover:underline"
                     >
-                      015118311067
+                      017662859345
                     </a>
                   </div>
 
-                  {/* Alternative Buchung Block */}
                   <div className="mt-8 pt-8 border-t border-border">
                     <p className="text-muted-foreground text-center mb-6 leading-relaxed">
                       Alternativ können Sie direkt hier die Verfügbarkeit Ihres Wunschtermins prüfen oder einen Termin buchen:
                     </p>
                     <div className="flex flex-col gap-3">
-                      <Button 
-                        asChild 
-                        variant="outline" 
-                        size="lg" 
-                        className="w-full"
-                      >
+                      <Button asChild variant="outline" size="lg" className="w-full">
                         <Link to="/termine/verfügbarkeit">
                           <Search className="w-5 h-5 mr-2" />
                           Verfügbarkeit prüfen
                         </Link>
                       </Button>
-                      <Button 
-                        asChild 
-                        variant="gold" 
-                        size="lg" 
-                        className="w-full"
-                      >
+                      <Button asChild variant="gold" size="lg" className="w-full">
                         <Link to="/termine/buchen">
                           <Calendar className="w-5 h-5 mr-2" />
                           Termin buchen
@@ -192,8 +180,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                         <p className="text-muted-foreground">
-                          Färberstraße 54<br />
-                          90402 Nürnberg
+                          Adalbertsteinweg 29<br />
+                          52070 Aachen
                         </p>
                       </div>
                     </div>
@@ -205,10 +193,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
                         <a 
-                          href="tel:015118311067" 
+                          href="tel:017662859345" 
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          015118311067
+                         017662859345
                         </a>
                       </div>
                     </div>
@@ -220,7 +208,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">E-Mail</h3>
                         <a 
-                          href="mailto:info@gentlemanscut.de" 
+                          href="mailto:info@mustershop.de" 
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           info@mustershop.de
@@ -235,9 +223,9 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Öffnungszeiten</h3>
                         <ul className="text-muted-foreground space-y-1 text-sm">
-                          <li>Mo - Fr: 10:00 - 20:00</li>
-                          <li>Samstag: 10:00 - 19:00</li>
-                          <li>Sonntag: Geschlossen</li>
+                          <li>Di, Mi, Fr, Sa: 10:00 - 19:00</li>
+                          <li>Donnerstag: 14:00 - 19:00</li>
+                          <li>So - Mo: Geschlossen</li>
                         </ul>
                       </div>
                     </div>
@@ -245,14 +233,14 @@ const Contact = () => {
 
                   <div className="aspect-video rounded-sm overflow-hidden border border-border mt-8">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.935844488252!2d11.069183276892435!3d49.44792955903806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57a835434d4d%3A0xfba938ebd99d6f67!2sTop%20Salon%20-%20N%C3%BCrnberg!5e0!3m2!1sde!2sde!4v1769779552025!5m2!1sde!2sde"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40325.64356858961!2d6.052527748632826!3d50.82463020000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995e09610cb1%3A0x49e9708ed901fa69!2sMaximum%20Hair%20Aachen!5e0!3m2!1sde!2sde!4v1770299672152!5m2!1sde!2sde"
                       width="100%"
                       height="100%"
                       style={{ border: 0, filter: 'grayscale(100%) contrast(1.2)' }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Standort The Gentleman's Cut"
+                      title="Standort Herren Frisör Aachen"
                     />
                   </div>
                 </div>
